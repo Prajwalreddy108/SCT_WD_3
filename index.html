@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="title">
+        <span>Tic Tac Toe</span>
+        
+      </div>
+      <div class="controls">
+        <div class="select">
+          <label for="mode">Mode:</label>
+          <select id="mode">
+            <option value="pvp">Player vs Player</option>
+            <option value="cpu">Player vs CPU (O)</option>
+          </select>
+        </div>
+        <button class="btn primary" id="newRound">New Round</button>
+        <button class="btn" id="undo">Undo</button>
+        <button class="btn danger" id="resetScores">Reset Scores</button>
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="card"><h4>Player X Wins</h4><div class="value" id="xWins">0</div></div>
+      <div class="card"><h4>Player O Wins</h4><div class="value" id="oWins">0</div></div>
+      <div class="card"><h4>Draws</h4><div class="value" id="draws">0</div></div>
+    </section>
+
+    <section class="board-wrap">
+      <div class="board" id="board"></div>
+      <aside class="sidebar">
+        <div class="panel">
+          <div class="status" id="status">X to move</div>
+          <div class="sub">Get three in a row horizontally, vertically, or diagonally.</div>
+          <div class="legend">
+            <span class="dot x"></span> X (You)
+            <span class="dot o"></span> O (Opponent)
+          </div>
+        </div>
+      </aside>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <h2 id="popup-message"></h2>
+    <button class="btn primary" id="popup-close">Play Again</button>
+  </div>
+</div>
